@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:MyCalc"
+             x:Class="MyCalc.MainPage">
+
+    <Grid ColumnSpacing="-5" RowSpacing="-10" Padding="5" BackgroundColor="Black">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width= "*" />
+            <ColumnDefinition Width= "*" />
+            <ColumnDefinition Width= "*" />
+            <ColumnDefinition Width= "*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="150"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Label x:Name="lbOut" Text="0" BackgroundColor="Black" FontSize="35"
+               TextColor="White" Grid.Row="0" Grid.ColumnSpan="4"
+               HorizontalTextAlignment="End"  VerticalTextAlignment="Center"/>
+
+        <Button Text="AC" TextColor="White" FontSize ="25" FontAttributes="Bold" BackgroundColor="Gray"
+                Grid.Row="1" Grid.ColumnSpan="3" Clicked="OnAllClearClicked"/>
+        <Button x:Name="Clear" TextColor="White" FontSize="25" FontAttributes="Bold" BackgroundColor="Gray"
+                Grid.Row="1" Grid.Column="3" Clicked="OnClearClicked"/>
+
+        <Button Text="sin" TextColor="White" FontSize="25" FontAttributes="Bold" BackgroundColor="Gray"
+                Grid.Row="2" Grid.Column="0" Clicked="OnSinClicked"/>
+        <Button Text="cos" TextColor="White" FontSize="25" FontAttributes="Bold" BackgroundColor="Gray"
+                Grid.Row="2" Grid.Column="1" Clicked="OnCosClicked"/>
+        <Button Text="log" TextColor="White" FontSize="25" FontAttributes="Bold" BackgroundColor="Gray"
+                Grid.Row="2" Grid.Column="2" Clicked="OnLnClicked"/>
+        <Button Text="^2" TextColor="White" FontSize="25" FontAttributes="Bold" BackgroundColor="Gray"
+                Grid.Row="2" Grid.Column="3" Clicked="OnSqrClicked"/>
+
+        <Button BackgroundColor="DarkGray" Text="1" TextColor="White" FontSize="25" FontAttributes="Bold"
+                Grid.Row="3" Grid.Column="0" Clicked="OnNumberClicked"/>
+        <Button BackgroundColor="DarkGray" Text="2" TextColor="White" FontSize="25" FontAttributes="Bold"
+                Grid.Row="3" Grid.Column="1" Clicked="OnNumberClicked"/>
+        <Button BackgroundColor="DarkGray" Text="3" TextColor="White" FontSize="25" FontAttributes="Bold"
+                Grid.Row="3" Grid.Column="2" Clicked="OnNumberClicked"/>
+        <Button BackgroundColor="Gray" Text="+" TextColor="White" FontSize="25" FontAttributes="Bold"
+                Grid.Row="3" Grid.Column="3" Clicked="OnSignClicked"/>
+
+        <Button BackgroundColor="DarkGray" Text="4" TextColor="White" FontSize="25" FontAttributes="Bold"
+                Grid.Row="4" Grid.Column="0" Clicked="OnNumberClicked"/>
+        <Button BackgroundColor="DarkGray" Text="5" TextColor="White" FontSize="25" FontAttributes="Bold"
+                Grid.Row="4" Grid.Column="1" Clicked="OnNumberClicked"/>
+        <Button BackgroundColor="DarkGray" Text="6" TextColor="White" FontSize="25" FontAttributes="Bold"
+                Grid.Row="4" Grid.Column="2" Clicked="OnNumberClicked"/>
+        <Button BackgroundColor="Gray" Text="-" TextColor="White" FontSize="25" FontAttributes="Bold"
+                Grid.Row="4" Grid.Column="3" Clicked="OnSignClicked"/>
+
+        <Button BackgroundColor="DarkGray" Text="7" TextColor="White" FontSize="25" FontAttributes="Bold"
+                Grid.Row="5" Grid.Column="0" Clicked="OnNumberClicked"/>
+        <Button BackgroundColor="DarkGray" Text="8" TextColor="White" FontSize="25" FontAttributes="Bold"
+                Grid.Row="5" Grid.Column="1" Clicked="OnNumberClicked"/>
+        <Button BackgroundColor="DarkGray" Text="9" TextColor="White" FontSize="25" FontAttributes="Bold"
+                Grid.Row="5" Grid.Column="2" Clicked="OnNumberClicked"/>
+        <Button BackgroundColor="Gray" Text="*" TextColor="White" FontSize="25" FontAttributes="Bold"
+                Grid.Row="5" Grid.Column="3" Clicked="OnSignClicked"/>
+
+        <Button BackgroundColor="Gray" Text="," TextColor="White" FontSize="25" FontAttributes="Bold"
+                Grid.Row="6" Grid.Column="0" Clicked="OnDotClicked"/>
+        <Button BackgroundColor="DarkGray" Text="0" TextColor="White" FontSize="25" FontAttributes="Bold"
+                Grid.Row="6" Grid.Column="1" Clicked="OnNumberClicked"/>
+        <Button BackgroundColor="Gray" Text="=" TextColor="White" FontSize="25" FontAttributes="Bold"
+                Grid.Row="6" Grid.Column="2" Clicked="OnEqualClicked"/>
+        <Button BackgroundColor="Gray" Text="/" TextColor="White" FontSize="25" FontAttributes="Bold"
+                Grid.Row="6" Grid.Column="3" Clicked="OnSignClicked"/>
+    </Grid>
+
+</ContentPage>
